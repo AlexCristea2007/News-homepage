@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="CSS Styles/main.css">
+  <link rel="stylesheet" href="CSS Styles/components.css">
+  
+  <title>Frontend Mentor | News homepage</title>
+
+ 
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+<div class="appWrapper">
+  <!-- NAVIGATION -->
+  <nav class="navigation-container">
+    <div class="logo">
+      <img src="assets/images/logo.svg" alt="logo icon">
+    </div>
+    <ul class="nav-links-list">
+      <li class="nav-link">
+        Home
+      </li>
+      <li class="nav-link">
+        New
+      </li>
+      <li class="nav-link">
+        Popular
+      </li>
+      <li class="nav-link">
+        Trending
+      </li>
+      <li class="nav-link">
+        Categories
+      </li>
+    </ul>  
+      <div class="mobile-menu">
+        <div class="bars-btn">
+          <button type="button" onclick="showMenu()">
+            <img src="assets/images/icon-menu.svg" alt="mobile menu icon">
+          </button>
+        </div>
+        <div class="mobile-dropdown" id="m-dropdown">
+          <div class="close-btn">
+            <button type="button" onclick="hideMenu()">
+              <img src="assets/images/icon-menu-close.svg" alt="close icon">
+            </button>
+          </div>
+          <ul class="mobile-nav-links-list">
+            <li class="mobile-nav-link">
+              Home
+            </li>
+            <li class="mobile-nav-link">
+              New
+            </li>
+            <li class="mobile-nav-link">
+              Popular
+            </li>
+            <li class="mobile-nav-link">
+              Trending
+            </li>
+            <li class="mobile-nav-link">
+              Categories
+            </li>
+          </ul>
+        </div>
+        <div id="overlay"></div>
+      </div>
+  </nav>
+
+<div class="grid-container">
+  <!------------------------------------------------------------->  
+  <!-- MAIN -->
+  <main class="main-container">
+    <div class="hero-image-section">
+      <img src="assets/images/image-web-3-mobile.jpg" alt="web image">
+    </div>
+    <div class="hero-text-section">
+      <div class="main-title-section">
+        <h1 class="main-title">The Bright Future of Web 3.0?</h1>
+      </div>
+      <div class="main-desc-section">
+        <p class="main-desc">
+          We dive into the next evolution of the web that 
+          claims to put the power back into the hands of the people.
+          But is it really fulfilling its promise?
+        <button class="read-btn">Read more</button>  
+      </div>
+    </div>
+  </main>
+  <!------------------------------------------------------------->
+  <!-- ASIDE -->
+  <aside class="aside-container">
+    <div class="aside-title-section">
+      <h2 class="aside-title">New</h2>
+    </div>
+    <div class="aside-concepts-list">
+      <div class="concept">
+        <h3 class="concept-title">Hydrogen VS Electric Cars</h3>
+        <p class="concept-desc">
+          Will hydrogen fuel cells ever catch up to EVs?
+        </p>
+      </div>
+      <div class="concept">
+        <h3 class="concept-title">The Downsides of AI Artistry</h3>
+        <p class="concept-desc">
+          What are the possible adverse effects of on-demand AI 
+          image generation?
+        </p>
+      </div>
+      <div class="concept">
+        <h3 class="concept-title">Is VC Funding Drying Up?</h3>
+        <p class="concept-desc">
+          Private funding by VC firms is down 50% YOY. We 
+          take a look at what that means.
+        </p>
+      </div>
+    </div>
+  </aside>
+</div>  
+  <!------------------------------------------------------------->
+  <!-- CREATION BLOGS -->
+  <div class="creation-container">
+
+    <div class="creation-blog">
+      <div class="creation-image-section">
+        <img src="assets/images/image-retro-pcs.jpg" alt="">
+      </div>
+      <div class="right-section">
+        <div class="creation-number-section">
+          <h3 class="creation-number">01</h3>
+        </div>
+        <div class="creation-title-section">
+          <h4 class="creation-title">Reviving Retro PCs</h4>
+        </div>
+        <div class="creation-desc-section">
+          <p class="creation-desc">
+            What happens when old PCs are given modern upgrades?
+          </p>
+        </div>
+      </div>  
+    </div>
+
+    <div class="creation-blog">
+      <div class="creation-image-section">
+        <img src="assets/images/image-top-laptops.jpg" alt="">
+      </div>
+      <div class="right-section">
+        <div class="creation-number-section">
+          <h3 class="creation-number">02</h3>
+        </div>
+        <div class="creation-title-section">
+          <h4 class="creation-title">Top 10 Laptops of 2022</h4>
+        </div>
+        <div class="creation-desc-section">
+          <p class="creation-desc">
+            Our best picks for various needs and budgets.
+          </p>
+        </div>
+      </div>  
+    </div>
+
+    <div class="creation-blog">
+      <div class="creation-image-section">
+        <img src="assets/images/image-gaming-growth.jpg" alt="">
+      </div>
+      <div class="right-section">
+        <div class="creation-number-section">
+          <h3 class="creation-number">03</h3>
+        </div>
+        <div class="creation-title-section">
+          <h4 class="creation-title">The Growth of Gaming</h4>
+        </div>
+        <div class="creation-desc-section">
+          <p class="creation-desc">
+            How the pandemic has sparked fresh opportunities.
+          </p>
+        </div>
+      </div>  
+    </div>
+      
+  </div>  
+    
+               
+    
+    
+    
+  <!------------------------------------------------------------->
+  <!-- ATTRIBUTION -->
+  <div class="attribution" style="margin-top: 50px;padding-bottom: 20px;">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Cristea Adrian Alexandru</a>.
+  </div>
+
+</div>  
+  <script src="script.js"></script>
+</body>
+</html>
